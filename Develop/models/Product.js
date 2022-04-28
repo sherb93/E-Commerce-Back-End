@@ -38,7 +38,7 @@ Product.init(
       }
     },
 
-    categoryId: {
+    category_id: {
       type: DataTypes.INTEGER,
       references: {
         model: "category",
