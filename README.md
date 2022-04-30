@@ -26,3 +26,6 @@ If you would like to clone or fork this repo, here are a few instructions that m
 7. Use an API Client like Insomnia REST to test the API routes.
 
 ## Demo
+
+https://user-images.githubusercontent.com/95831392/166119541-4aad68ae-850b-4e2c-a5be-a66e8d3a824c.mp4
+
