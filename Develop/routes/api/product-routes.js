@@ -1,6 +1,5 @@
 const router = require("express").Router();
 const { Product, Category, Tag, ProductTag } = require("../../models");
-const { findAll } = require("../../models/Product");
 
 // The `/api/products` endpoint
 
@@ -54,7 +53,6 @@ router.route("/")
     };
   });
 
-// get one product
 router.route("/:id")
   .get(async (req, res) => {
     try {
@@ -76,7 +74,7 @@ router.route("/:id")
   })
   .put((req, res) => {
     // update product data
-    // If update changes tags then include property { tagIds: [x] }
+    // If update changes the assocaited tags then include property { tagIds: [x] }
     Product.update(req.body, {
       where: {
         id: req.params.id,
@@ -111,7 +109,6 @@ router.route("/:id")
     })
     .then((updatedProductTags) => res.json(updatedProductTags))
     .catch((err) => {
-      // console.log(err);
       res.status(400).json(err);
     });
   })
